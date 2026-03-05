@@ -37,8 +37,15 @@ font-weight:600;
 
 .gallery{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(3,1fr);
 gap:30px;
+}
+
+/* Tablet */
+@media (max-width: 992px){
+.gallery{
+grid-template-columns:repeat(2,1fr);
+}
 }
 
 /* Glassmorphism cards */
@@ -120,3 +127,23 @@ object-fit:cover;
 border-radius:12px;
 }
 
+/* Mobile */
+@media (max-width: 600px){
+body{
+padding:20px;
+}
+
+header{
+flex-direction:column;
+gap:15px;
+text-align:center;
+}
+
+.gallery{
+grid-template-columns:1fr;
+}
+
+.card img{
+height:200px;
+}
+}
